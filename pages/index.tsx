@@ -4,8 +4,20 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
+import styled from 'styled-components'
+
+const TestStyled = styled.div`
+  border:1px solid #000000;
+  display:block;
+  width:150px;
+  margin:10px auto;
+  align-items: center;
+  color:#ff00ff;
+  height: 100px;
+`
 const Home: NextPage = () => {
   return (
+    <>
     <div className={styles.container}>
       <Head>
         <title>SomniLife - Sospace</title>
@@ -18,15 +30,11 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
         Sospace 
         </h1>
-
-        
-
         <div className={styles.grid}>
         <Link href="/welcom">
           <a>welcom</a>
-          
         </Link>
-          
+        <TestStyled>Test Styled</TestStyled>
         <Image src="/favicon.png" alt="Vercel Logo" width={50} height={52} />
         </div>
       </main>
@@ -35,6 +43,7 @@ const Home: NextPage = () => {
         footer
       </footer>
     </div>
+    </>
   )
 }
 
